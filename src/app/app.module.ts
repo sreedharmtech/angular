@@ -18,6 +18,9 @@ import { HighlightDirective } from './attrdir/highlight.directive';
 import { AttrComponent } from './attrdir/attr.component';
 import { StrdirComponent } from './strdir/strdir.component';
 import { MyNgIfDirective } from './strdir/my-ng-if.component';
+import {ParentComponent} from './prov/parent.component'
+import { ChildComponent } from './prov/child.component';
+import { SimpleService } from './prov/simple.service';
 
 
 
@@ -46,9 +49,13 @@ import { MyNgIfDirective } from './strdir/my-ng-if.component';
     HighlightDirective,
     MyNgIfDirective,
     AttrComponent,
-    StrdirComponent
+    StrdirComponent,
+    ParentComponent,
+    ChildComponent
   ],
+  
   //AttrComponent , StrdirComponent
-  bootstrap: [ AppComponent,AttrComponent,StrdirComponent]
+  bootstrap: [ AppComponent,AttrComponent,StrdirComponent,ParentComponent],
+  providers: [ SimpleService ]
 })
 export class AppModule { }
